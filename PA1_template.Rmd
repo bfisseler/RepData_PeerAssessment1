@@ -62,7 +62,7 @@ for(i in 1:nOfRows){
 # aggregate the total number of steps per date
 dfSumAct2 <- aggregate(steps~date, data = dfActivity2, FUN="sum")
 # plot a histogram
-hist(dfSumAct2$steps, xlab = "Number of Steps", main = "Histogram of Total # of Steps")
+hist(dfSumAct2$steps, xlab = "Number of Steps", main = "Histogram of Total # of Steps, Missing Data Imputed")
 medianWithImpute <- round(median(dfSumAct2$steps, na.rm = TRUE),2)
 meanWithImpute <- round(mean(dfSumAct2$steps, na.rm = TRUE),2)
 ```

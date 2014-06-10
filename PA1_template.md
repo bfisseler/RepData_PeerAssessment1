@@ -88,7 +88,7 @@ for (i in 1:nOfRows) {
 # per date
 dfSumAct2 <- aggregate(steps ~ date, data = dfActivity2, FUN = "sum")
 # plot a histogram
-hist(dfSumAct2$steps, xlab = "Number of Steps", main = "Histogram of Total # of Steps")
+hist(dfSumAct2$steps, xlab = "Number of Steps", main = "Histogram of Total # of Steps, Missing Data Imputed")
 ```
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
