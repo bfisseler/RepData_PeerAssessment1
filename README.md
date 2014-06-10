@@ -1,5 +1,5 @@
 # Reproducible Research: Peer Assessment 1
-This is just a copy of the PA1_template.md
+
 
 ## Loading and preprocessing the data
 
@@ -64,6 +64,8 @@ nMissingData <- sum(is.na(dfActivity$steps))
 
 The total number of cases with NA is: 2304.
 
+There are several strategies for imputing missing data. The following code checks for any NA of each interval/date and replaces them with the average (*M*) value for that interval. See details in the comments.
+
 
 ```r
 # first, we duplicate the original data set
@@ -88,7 +90,7 @@ for (i in 1:nOfRows) {
 # per date
 dfSumAct2 <- aggregate(steps ~ date, data = dfActivity2, FUN = "sum")
 # plot a histogram
-hist(dfSumAct2$steps, xlab = "Number of Steps", main = "Histogram of Total # of Steps")
+hist(dfSumAct2$steps, xlab = "Number of Steps", main = "Histogram of Total # of Steps, Missing Data Imputed")
 ```
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 

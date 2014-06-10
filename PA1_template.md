@@ -64,6 +64,8 @@ nMissingData <- sum(is.na(dfActivity$steps))
 
 The total number of cases with NA is: 2304.
 
+There are several strategies for imputing missing data. The following code checks for any NA of each interval/date and replaces them with the average (*M*) value for that interval. See details in the comments.
+
 
 ```r
 # first, we duplicate the original data set
