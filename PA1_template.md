@@ -1,5 +1,5 @@
 # Reproducible Research: Peer Assessment 1
-This is just a copy of the PA1_template.md
+
 
 ## Loading and preprocessing the data
 
